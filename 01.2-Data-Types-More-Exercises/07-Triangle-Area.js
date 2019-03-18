@@ -4,5 +4,3 @@ function triangleArea(a, b, c) {
   console.log(result);
 }
 triangleArea(2, 3.5, 4);
-
-asdasd
