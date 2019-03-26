@@ -1,0 +1,2 @@
+Could not finish or did not have time for the following exercises:
+08-Condence-Array-to-Number

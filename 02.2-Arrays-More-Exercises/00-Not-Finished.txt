@@ -1,0 +1,5 @@
+Could not finish or did not have time for the following exercises:
+05-Magic-Matrices
+06-Spiral-Matrix
+07-Diagonal-Attack
+08-Orbit

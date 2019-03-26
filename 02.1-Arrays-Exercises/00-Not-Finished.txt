@@ -1,0 +1,5 @@
+Could not finish or did not have time for the following exercises:
+07-Max-Sequence-of-Equal-Elements
+08-Magic-Sum
+09-Team-Account
+10-Ladybugs
