@@ -2,9 +2,9 @@ function questJournal(input) {
 
   let myJournal = input[0].split(', ');
   for (let i = 1; i < input.length; i++) {
-    const element = input[i].split(' - ')
+    const element = input[i].split(' - ');
     if (element === 'Retire!') {
-      break
+      break;
     }
     let command = element[0];
     let quest = element[1];
@@ -49,5 +49,4 @@ questJournal([
   'Side Quest - If else:Switch',
   'Renew - Hello World',
   'Retire!',
-
-])
+]);
