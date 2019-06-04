@@ -1,29 +1,19 @@
-function magicSum(inputArr) {
-  let targetNum = Number(inputArr[1]);
-  let string = inputArr[0];
-  let dataArr = string.split(' ');
-  let dataOutput = [];
+function magicSum(inputArr, number) {
 
-  for (let i = 0; i < dataArr.length; i++) {
+  let numToCompare = Number(number);
 
-    const firstElem = Number(dataArr[i]);
-    for (let k = 1; k < dataArr.length; k++) {
-      const secondElem = Number(dataArr[k]);
-      let sumOfElems = firstElem + secondElem;
-      if (sumOfElems === targetNum &&
-        !dataOutput.includes(firstElem) &&
-        !dataOutput.includes(secondElem)) {
-
-        dataOutput.push(firstElem, secondElem);
-        //console.log(`${firstElem} ${secondElem}`);
-        //firstElem !== secondElem
+  for (let i = 0; i < inputArr.length; i++) {
+    const currentElement = inputArr[i];
+    for (let j = i + 1; j < inputArr.length; j++) {
+      const nextElement = inputArr[j];
+      const isConditionTrue = currentElement + nextElement === numToCompare;
+      if (isConditionTrue) {
+        console.log(`${currentElement} ${nextElement}`);
       }
     }
   }
-
-  for (let o = 0; o < dataOutput.length; o += 2) {
-    console.log(`${dataOutput[o]} ${dataOutput[o+1]}`);
-  }
-
 }
-magicSum(['1 2 3 4 5 6', '6']);
+magicSum(
+  [1, 7, 6, 2, 19, 23],
+  8
+);

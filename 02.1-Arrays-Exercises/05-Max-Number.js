@@ -5,7 +5,7 @@ function printMaxNums(inputArr) {
 
   for (let i = array.indexOf(highestNum); i < array.length; i++) {
     const element = array[i];
-    let check = array.slice(i)
+    let check = array.slice(i);
     if (Math.max(...check) === element && !store.includes(element)) {
       store.push(element);
     }

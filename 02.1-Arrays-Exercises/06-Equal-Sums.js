@@ -24,4 +24,4 @@ function equalSums(inputArr) {
   console.log('no');
 
 }
-equalSums([1, 2, 3, 3])
+equalSums([1, 2, 3, 3]);

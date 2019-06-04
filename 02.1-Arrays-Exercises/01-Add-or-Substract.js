@@ -22,4 +22,4 @@ function modifyArray(input) {
   console.log(modifiedSum);
 
 }
-modifyArray([5, 15, 23, 56, 35])
+modifyArray([5, 15, 23, 56, 35]);
