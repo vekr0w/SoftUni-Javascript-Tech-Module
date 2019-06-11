@@ -1,7 +1,7 @@
 //shortest and longest
 function findWordLengths(inputText) {
 
-  let data = inputText.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(' ');
+  let data = inputText[0].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(' ');
   if (data[data.length - 1] == '') {
     data.pop();
   }
@@ -23,4 +23,4 @@ function findWordLengths(inputText) {
   console.log(`Shortest -> ${shortestWord}`);
 
 }
-findWordLengths('Hello, sad, asd, 41 ')
+findWordLengths(['Hello, sad, asd, 41 ']);

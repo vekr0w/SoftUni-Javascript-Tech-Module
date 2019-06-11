@@ -3,7 +3,7 @@ function returnSums(input) {
   let data = input
     .toString()
     .split('')
-    .map(Number)
+    .map(Number);
 
   let sumEven = 0;
   let sumOdd = 0;

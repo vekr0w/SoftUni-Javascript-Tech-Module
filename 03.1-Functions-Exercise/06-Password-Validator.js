@@ -4,9 +4,9 @@ function isPasswordValid(input) {
     let passLength = password.length;
 
     if (passLength >= 6 && passLength <= 10) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   }
 
@@ -19,12 +19,12 @@ function isPasswordValid(input) {
     counter = 0;
     data.forEach(element => {
       if (Number(element))
-        counter++
+        counter++;
     });
     if (counter >= 2)
-      return true
+      return true;
     else
-      return false
+      return false;
 
   }
 

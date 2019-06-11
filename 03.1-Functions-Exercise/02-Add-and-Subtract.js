@@ -4,7 +4,7 @@ function calculate(numOne, numTwo, numThree) {
   //let dividedSum = sumOfFirstTwo - Number(numThree);
   //console.log(dividedSum);
 
-  return Number(numOne + numTwo - numThree)
+  return Number(numOne + numTwo - numThree);
 
 }
 calculate(23, 6, 10);
