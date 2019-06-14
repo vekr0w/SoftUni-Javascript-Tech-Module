@@ -21,7 +21,7 @@ function helloFrance(input) {
       budget -= cost;
     }
   }
-  itemsBought = itemsBought.map(item => item += item * 0.40)
+  itemsBought = itemsBought.map(item => item += item * 0.40);
   sum = itemsBought.reduce(function(a, b) { return a + b; }, 0);
   sum += budget;
   let profit = sum - initialBudget;
