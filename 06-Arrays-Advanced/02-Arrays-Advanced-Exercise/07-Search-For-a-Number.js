@@ -10,11 +10,11 @@ function searchForNumber(firstArray, secondArray) {
 
   newArray.forEach(element => {
     if (element == elementToSearch) {
-      occurances++
+      occurances++;
     }
   });
 
-  console.log(`Number ${elementToSearch} occurs ${occurances} time.`);
+  console.log(`Number ${elementToSearch} occurs ${occurances} times.`);
 }
 searchForNumber(
   [5, 2, 3, 4, 1, 6], [5, 2, 3]);
