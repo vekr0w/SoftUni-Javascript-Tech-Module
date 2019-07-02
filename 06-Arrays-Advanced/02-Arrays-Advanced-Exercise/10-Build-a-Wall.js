@@ -5,7 +5,7 @@ function buildingWall(input) {
   for (let i = 0; i < input.length; i++) {
     const element = input[i];
     for (let j = element, temp = 0; j < 30; j++, temp++) {
-      Number(dailyUnits[temp]) ? dailyUnits[temp] += 195 : dailyUnits.push(195)
+      Number(dailyUnits[temp]) ? dailyUnits[temp] += 195 : dailyUnits.push(195);
       totalUnitsConcrete += 195;
     }
   }

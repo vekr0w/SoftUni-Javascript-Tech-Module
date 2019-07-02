@@ -11,4 +11,4 @@ convertToJson(
   'George',
   'Jones',
   'Brown'
-)
+);

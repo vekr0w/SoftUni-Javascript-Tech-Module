@@ -1,37 +1,37 @@
 function gladiatorInventory(input) {
 
-  let currentEquipment = input.shift().split(' ')
+  let currentEquipment = input.shift().split(' ');
 
   for (const command of input) {
 
-    item = command.split(' ').pop()
+    item = command.split(' ').pop();
 
     if (command.includes('Buy')) {
-      buy(currentEquipment, item)
+      buy(currentEquipment, item);
     } else if (command.includes('Trash')) {
-      trash(currentEquipment, item)
+      trash(currentEquipment, item);
     } else if (command.includes('Repair')) {
-      repair(currentEquipment, item)
+      repair(currentEquipment, item);
     } else if (command.includes('Upgrade')) {
-      upgrade(currentEquipment, item)
+      upgrade(currentEquipment, item);
     }
   }
 
 
   function upgrade(equipment, itemUpg) {
-    let temp = itemUpg.split('-')
+    let temp = itemUpg.split('-');
     item = temp[0];
-    upgrade = temp[1];
+    let upgrade = temp[1];
     if (equipment.includes(item)) {
       let indexToAddUpgrade = equipment.indexOf(item);
-      let upgradedItemToAdd = `${item}:${upgrade}`
-      equipment.splice(indexToAddUpgrade + 1, 0, upgradedItemToAdd)
+      let upgradedItemToAdd = `${item}:${upgrade}`;
+      equipment.splice(indexToAddUpgrade + 1, 0, upgradedItemToAdd);
     }
   }
 
   function repair(equipment, item) {
     if (equipment.includes(item)) {
-      let indexToRemoveFrom = equipment.indexOf(item)
+      let indexToRemoveFrom = equipment.indexOf(item);
       removed = equipment.splice(indexToRemoveFrom, 1);
       equipment.push(...removed);
     }
@@ -39,14 +39,14 @@ function gladiatorInventory(input) {
 
   function trash(equipment, item) {
     if (equipment.includes(item)) {
-      let indexToRemoveFrom = equipment.indexOf(item)
+      let indexToRemoveFrom = equipment.indexOf(item);
       equipment.splice(indexToRemoveFrom, 1);
     }
   }
 
   function buy(equipment, item) {
     if (!equipment.includes(item))
-      return equipment.push(item)
+      return equipment.push(item);
   }
 
   console.log(currentEquipment.join(' '));
@@ -56,7 +56,7 @@ gladiatorInventory(['SWORD Shield Spear',
   'Trash Bow',
   'Repair Shield',
   'Upgrade Helmet-V'
-])
+]);
 
 /*
 Buy {equipment}
