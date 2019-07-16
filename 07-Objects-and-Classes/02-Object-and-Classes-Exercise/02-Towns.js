@@ -12,11 +12,8 @@ function towns(input) {
     townLatitude = Number(townLatitude).toFixed(2);
     townlongitude = Number(townlongitude).toFixed(2);
     let currentTown = new Town(townName, townLatitude, townlongitude);
-    console.log(currentTown);
-
-    
+    console.log(JSON.parse(JSON.stringify(currentTown)));
   }
-
 }
 towns(
   ['Sofia | 42.696552 | 23.32601',

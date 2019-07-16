@@ -1,17 +1,11 @@
-function storeMoviesData(input) {
-  let inputLength = input.length;
-  let moviesDataObject = {};
+function storeMovies(input) {
 
-  for (let i = 0; i < inputLength; i++) {
-    let element = input[i];
-    console.log(element);
-    
+  let movieData = [];
 
-  }
 
 
 }
-storeMoviesData(
+storeMovies(
   ['addMovie Fast and Furious',
     'addMovie Godfather',
     'Inception directedBy Christopher Nolan',
