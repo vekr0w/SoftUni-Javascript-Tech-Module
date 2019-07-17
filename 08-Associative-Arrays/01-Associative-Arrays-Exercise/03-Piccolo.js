@@ -14,18 +14,17 @@ function piccolo(input) {
     }
 
   }
-  //console.log(parkingLot);
   if (parkingLot.length < 1) {
     return console.log(`Parking Lot is Empty`);
   } else {
     let sortedParkingLot = parkingLot.sort((a, b) => {
-      let firstNumber = a.splice(2,4);
-      let secondNumber = a.splice(2,4);
+      let firstNumber = a.split('').splice(2, 4).join('');
+      let secondNumber = b.split('').splice(2, 4).join('');
       return firstNumber - secondNumber;
     });
 
     sortedParkingLot.forEach(element => {
-      //console.log(element);
+      console.log(element);
 
     });
   }
@@ -42,4 +41,5 @@ piccolo(
     'OUT, CA2866HI',
     'IN, CA9876HH',
     'IN, CA2822UU']
+
 );
