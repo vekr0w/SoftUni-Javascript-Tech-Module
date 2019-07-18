@@ -1,0 +1,3 @@
+Lab - https://softuni.bg/trainings/resources/officedocument/41717/lab-js-fundamentals-may-2019/2343
+Exercies - https://softuni.bg/trainings/resources/officedocument/41718/exercise-js-fundamentals-may-2019/2343
+More Exercies - https://softuni.bg/trainings/resources/officedocument/41719/more-exercise-js-fundamentals-may-2019/2343
