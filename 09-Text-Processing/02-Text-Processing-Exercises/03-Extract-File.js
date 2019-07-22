@@ -1,16 +1,11 @@
 function extractFile(input) {
 
-  let inputToArr = input.split('\\');
-  let fileData = inputToArr.pop().split('.');
-  if (fileData.length == 2) {
-    let [fileName, fileExtention] = fileData;
-    console.log(`File name: ${fileName}`);
-    console.log(`File extension: ${fileExtention}`);
-  } else {
-    let [fileName, firstExtention, secondExtention] = fileData;
-    fileExtention = `${firstExtention}.${secondExtention}`;
-    console.log(`File name: ${fileName}`);
-    console.log(`File extension: ${fileExtention}`);
-  }
+  let fileNameStart = input.lastIndexOf('\\') + 1;
+  let fileNameEnd = input.lastIndexOf('.');
+  let fileName = input.substring(fileNameStart, fileNameEnd);
+  let fileExtention = input.substr(fileNameEnd + 1);
+  
+  console.log(`File name: ${fileName}`);
+  console.log(`File extension: ${fileExtention}`);
 }
 extractFile('C:\\Template.pptx.txt');
