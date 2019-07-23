@@ -1,4 +1,5 @@
 function taskTwo(input) {
+  const countOccurrences = (arr, val) => arr.reduce((a, v) => (v > val ? a + 1 : a), 0);
 
   let currentTasks = input.shift().split(' ').map(Number);
   const upcomingTasksLength = input.length;
@@ -31,15 +32,12 @@ function taskTwo(input) {
     }
 
     if (command === 'Count' && firstNum === 'Completed') {
-      const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
       console.log(countOccurrences(currentTasks, 0));
     }
     if (command === 'Count' && firstNum === 'Incomplete') {
-      const countOccurrences = (arr, val) => arr.reduce((a, v) => (v > val ? a + 1 : a), 0)
       console.log(countOccurrences(currentTasks, 0));
     }
     if (command === 'Count' && firstNum === 'Dropped') {
-      const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
       console.log(countOccurrences(currentTasks, -1));
     }
   }
