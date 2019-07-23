@@ -1,18 +1,24 @@
 function asciiSumator(input) {
 
-  let startChar = input[0];
-  let endChar = input[1];
-  let filterRegex = /[^?-E]/g;
-  let regex = new RegExp('^' + startChar - endChar, 'g');
-  let randomString = input[2];
-  let filteredString = randomString.replace(filterRegex, '').split('');
+  let startCharCode = input[0].charCodeAt(0);
+  let endCharCode = input[1].charCodeAt(0);
+  let charData = input[2].split('');
   let sum = 0;
-  filteredString.forEach(char => {
-    sum += char.charCodeAt(0);
-  });
-  console.log(sum);
 
+  if (startCharCode > endCharCode) {
+    let temp = endCharCode;
+    endCharCode = startCharCode;
+    startCharCode = temp;
+  }
+
+  for (const char of charData) {
+    let currentCharCode = char.charCodeAt(0);
+    if (currentCharCode > startCharCode && currentCharCode < endCharCode) {
+      sum += currentCharCode;
+    }
+  }
+  console.log(sum);
 }
 asciiSumator(
-  ['?', 'E', '@ABCEF']
+  ['a', '1', 'jfe392$#@j24ui9ne#@$']
 );
