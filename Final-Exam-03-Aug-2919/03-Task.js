@@ -1,0 +1,11 @@
+function task(input) {
+
+
+
+
+
+
+}
+task(
+
+);
